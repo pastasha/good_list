@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -14,3 +15,6 @@ class GoodDeedRecord(models.Model):
     generalDescription = models.TextField(max_length=500, null=True)
     status = models.CharField(max_length=30, null=True)
     creationDate = models.DateField()
+
+    def get_absolute_url(self):
+        return reverse('good_deed', args=[str(self.id)])
