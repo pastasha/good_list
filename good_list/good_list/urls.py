@@ -7,10 +7,19 @@ from django.conf import settings
 from django.conf.urls.static import static #для добавления статических файлов
 
 
+'''
+    Глобальный маршрутизатор проекта
+'''
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+# глобальный маршрутизатор перенаправит на локальный маршрутизатор приложения
+    # список каталогов помощи
     path('catalog/',include('catalog.urls')),
-    path('',RedirectView.as_view(url='/catalog/', permanent=True)),
-    *static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
+    # главная страница
+    path('', include('main.urls')),
+    #path('',RedirectView.as_view(url='/catalog/', permanent=True)),
+    *static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    #path('catalog/', include('catalog.urls')),
 ]
 
