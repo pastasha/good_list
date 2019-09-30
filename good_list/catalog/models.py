@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
-# Create your models here.
+# Create your models  here.
 
 # Модель получающая записи для страницы "список добрых дел"
 class GoodDeedRecord(models.Model):
