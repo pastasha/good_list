@@ -33,3 +33,6 @@ class GoodDeedRecord(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('good_deed', args=[str(self.id)])
