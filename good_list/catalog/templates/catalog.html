@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    {% for good_deed in good_deeds %}
+        <div class="post-entry">
+            <h2> <a href="">{{ good_deed.title }}</a> </h2>
+            <p>{{ good_deed.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}
