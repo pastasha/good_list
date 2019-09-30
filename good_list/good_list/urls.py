@@ -17,7 +17,7 @@ urlpatterns = [
     # список каталогов помощи
     path('catalog/',include('catalog.urls')),
     # главная страница
-    path('', include('main.urls')),
+    path('', include('catalog.urls')),
     #path('',RedirectView.as_view(url='/catalog/', permanent=True)),
     *static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     #path('catalog/', include('catalog.urls')),

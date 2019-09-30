@@ -9,27 +9,9 @@ def index(request):
     """
     Функция отображения для домашней страницы сайта.
     """
-<<<<<<< HEAD
-    good_deeds = list(GoodDeedRecord.objects.all())
-    # переменной контекста context
-    return render(
-        request,
-        'catalog.html',
-        {'good_deeds': good_deeds}  # num_visits appended
-    )
-
-
-'''
-    Заменен на свой обработчик
-
-# Обработчик конкретного html шаблона
-class BaseCatalogView(ListView):
-    model = GoodDeedRecord
-    template_name = 'index.html'
-
-'''
-=======
+    # подсчитывает -???-
     good_deed = GoodDeedRecord.objects.count()
+    # подсчитывает количество добрых дел
     num_good_deeds = GoodDeedRecord.objects.all().count()
     # переменной контекста context
     return render(
@@ -55,4 +37,4 @@ class INeedHelpPost(generic.DetailView):
     model = GoodDeedRecord
     paginate_by = 10
     template_name = 'catalog/i_need_help_post.html'
->>>>>>> dev
+
