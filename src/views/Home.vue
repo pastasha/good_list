@@ -1,5 +1,5 @@
 <template>
-  <div class="home-view">
+  <div class="home-root">
     <vue-headful
       title="Title from vue-headful"
       description="Description from vue-headful"
