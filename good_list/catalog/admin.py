@@ -21,4 +21,3 @@ admin.site.register(ReportPost)
 
 admin.site.unregister(Group)
 
-# Register your models here.
