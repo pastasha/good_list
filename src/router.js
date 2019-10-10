@@ -7,6 +7,7 @@ import NeedHelpCategory from './views/NeedHelpCategory.vue'
 import WantHelp from './views/WantHelp.vue'
 import WantHelpCategory from './views/WantHelpCategory.vue'
 import Reports from './views/Reports.vue'
+import About from './views/About.vue'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/reports',
       name: 'reports',
       component: Reports
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About
     }
   ]
 })

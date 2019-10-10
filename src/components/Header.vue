@@ -7,7 +7,7 @@
                 <b-img src="../assets/images/logo.png" id="logo-img"></b-img>
             </b-nav-item>
             <b-nav-item to="/reports">Отчетность </b-nav-item>
-            <b-nav-item >О нас</b-nav-item>
+            <b-nav-item to="/about">О нас</b-nav-item>
         </b-nav>       
   
     </header>

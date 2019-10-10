@@ -24,8 +24,8 @@ export default {
     },
     mounted(){
         this.reports=[
-            {title:"В Раздельной открылось окно жизни",imageSrc:require(''), text: "", date: '09/12/2018',id:0},
-            {title:"В Раздельной открылось окно жизни",imageSrc:require(''), text: "asdasasdsdadqweqweqwezxcscsxcscsdcscsdcsdcsdccsc", date: '09/12/2018',id:1},
+            {title:"В Раздельной открылось окно жизни",imageSrc:require('@/assets/images/qwe.png'), text: "ewqdsdx", date: '09/12/2018',id:0},
+            {title:"В Раздельной открылось окно жизни",imageSrc:require('@/assets/images/qwe.png'), text: "asdasasdsdadqweqweqwezxcscsxcscsdcscsdcsdcsdccsc", date: '09/12/2018',id:1},
         ]
     }
 }
