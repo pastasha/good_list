@@ -1,6 +1,8 @@
 <template>
     <div class="container text-center" id="title-root">
-        <span id="title-span">{{title}}</span>
+        <div id="title-span">
+            {{title}}
+        </div>
     </div>
 </template>
 

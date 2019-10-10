@@ -7,9 +7,7 @@
             {{date}}
         </b-card-text>
         <b-card-img :src="imageSrc" class="news-item-img" />     
-        <b-card-text class="mt-3 text-center">
-            {{text}}
-        </b-card-text>
+        <b-card-text class="mt-3 text-center" v-html="text" />
     </b-card>            
 </template>
 

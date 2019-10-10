@@ -8,10 +8,10 @@
       <img src="@/assets/images/path5445.png" id="home-start-img"/>
       <div id="home-buttons" class="flex-column float-left">
         <div class="btn-wrapper">
-          <b-button squared class="home-btn">Хочу помочь</b-button>
+          <b-button squared class="home-btn" to="/want-help">Хочу помочь</b-button>
         </div>
         <div class="btn-wrapper">
-          <b-button squared class="home-btn" >Нужна помощь</b-button>
+          <b-button squared class="home-btn" to="/need-help">Нужна помощь</b-button>
         </div>
       </div>
     </div>

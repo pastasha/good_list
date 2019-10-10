@@ -1,18 +1,23 @@
 <template>
-    <div id="news-root">
-        <div class="container" v-for="item in news" :key="item.id">
-            <NewsItem :dataObj="item" />
+    <div>        
+        <Title title="Новостная лента" />
+        <div id="news-root">
+            <div class="container" v-for="item in news" :key="item.id">
+                <Card :dataObj="item" />
+            </div>
         </div>
     </div>
 </template>
 
 <script>
-import NewsItem from '@/components/NewsItem'
+import Card from '@/components/Card'
+import Title from '@/components/Title'
 
 export default {
     name: 'news',
     components: {
-        NewsItem
+        Card,
+        Title
     },
     data() {
         return {
