@@ -1,14 +1,32 @@
 from rest_framework import viewsets
 
-from .models import LegalEntity, Individual
-from .serializers import LegalEntitySerializer, IndividualSerializer
 
+from .models import HumanRecord, OrganizationRecord, NeedHelpPost, Respondent, ReportPost
+from .serializers import HumanRecordSerializer, OrganizationRecordSerializer, NeedHelpPostSerializer, \
+                         RespondentSerializer, ReportPostSerializer
 
-class LegalEntityViewSet(viewsets.ModelViewSet):
-    serializer_class = LegalEntitySerializer
-    queryset = LegalEntity.objects.all()
+class HumanRecordViewSet(viewsets.ModelViewSet):
+    serializer_class = HumanRecordSerializer
+    queryset = HumanRecord.objects.all()
 
+class OrganizationRecordViewSet(viewsets.ModelViewSet):
+    serializer_class = OrganizationRecordSerializer
+    queryset = OrganizationRecord.objects.all()
 
-class IndividualViewSet(viewsets.ModelViewSet):
-    serializer_class = IndividualSerializer
-    queryset = Individual.objects.all()
+class NeedHelpPostViewSet(viewsets.ModelViewSet):
+    serializer_class = NeedHelpPostSerializer
+    queryset = NeedHelpPost.objects.all()
+
+class RespondentViewSet(viewsets.ModelViewSet):
+    serializer_class = RespondentSerializer
+    queryset = Respondent.objects.all()
+
+'''
+class NewsPostViewSet(viewsets.ModelViewSet):
+    serializer_class = NewsPostSerializer
+    queryset = NewsPost.objects.all()
+'''
+
+class ReportPostViewSet(viewsets.ModelViewSet):
+    serializer_class = ReportPostSerializer
+    queryset = ReportPost.objects.all()
