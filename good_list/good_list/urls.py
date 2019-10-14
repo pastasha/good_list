@@ -10,9 +10,9 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     # список каталогов помощи
-    path('catalog/',include('catalog.urls')),
+    #path('catalog/',include('catalog.urls')),
     # главная страница
-    path('', include('catalog.urls')),
+    path('', include('good_api.urls')),
     path('good_api/', include('good_api.urls')),
 ]
 

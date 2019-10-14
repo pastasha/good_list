@@ -6,12 +6,12 @@ from .views import HumanRecordViewSet, OrganizationRecordViewSet, NeedHelpPostVi
                    RespondentViewSet, ReportPostViewSet
 
 
-router.register(r'human_record', HumanRecordViewSet, basename='user')
-router.register(r'organization_record', OrganizationRecordViewSet, basename='user')
-router.register(r'need_help_post', NeedHelpPostViewSet, basename='user')
-router.register(r'respondent', RespondentViewSet, basename='user')
+router.register(r'human_record', HumanRecordViewSet, basename='1')
+router.register(r'organization_record', OrganizationRecordViewSet, basename='2')
+router.register(r'need_help_post', NeedHelpPostViewSet, basename='3')
+router.register(r'respondent', RespondentViewSet, basename='4')
 #router.register(r'news_post', NewsPostViewSet, basename='user')
-router.register(r'report_post', ReportPostViewSet, basename='user')
+router.register(r'report_post', ReportPostViewSet, basename='5')
 
 urlpatterns = router.urls
 

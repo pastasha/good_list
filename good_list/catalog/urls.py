@@ -7,6 +7,6 @@ from django.urls import path
 '''
 
 urlpatterns = [
-    # своя функиция обработчик для view
+
 ]
 
