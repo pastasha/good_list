@@ -8,6 +8,7 @@ import WantHelp from './views/WantHelp.vue'
 import WantHelpCategory from './views/WantHelpCategory.vue'
 import Reports from './views/Reports.vue'
 import About from './views/About.vue'
+import MakeRequest from './views/MakeRequest.vue'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/make-request',
+      name: 'make-request',
+      component: MakeRequest
     }
   ]
 })
