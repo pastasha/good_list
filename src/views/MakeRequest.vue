@@ -11,7 +11,7 @@
                         </div>
                     </b-form-group>
                 </form>
-                <form class="p-3" v-if="requestType=='phys'">
+                <form class="p-3" v-if="requestType=='phys'" @submit="formSubmit" v-on:submit.prevent="formSubmit" method="post">
                     <b-form-group>
                         <div class="d-flex justify-content-center">                            
                             <span>Фио: </span>
@@ -30,6 +30,13 @@
                             <Datepicker v-model="phys.bdate"/>
                         </div>
                     </b-form-group>
+                    <b-form-group>
+                        <div class="d-flex justify-content-center">                            
+                            <span>Номер телефона:</span>
+                            <VuePhoneNumberInput v-model="phys.tel" />
+                        </div>
+                    </b-form-group>
+                    <b-button variant="primary" type="submit">Оформить</b-button>
                 </form>
             </div>
         </div>
@@ -40,21 +47,38 @@
 
 import Title from '@/components/Title.vue'
 import Datepicker from 'vuejs-datepicker'
+import VuePhoneNumberInput from 'vue-phone-number-input';
+import 'vue-phone-number-input/dist/vue-phone-number-input.css' 
+
 export default {
     data() {
         return {
             title: 'Оформить заявку',
             requestType: "phys",
             phys:{
-                name: '',
-                email: '',
-                bdate: null
+                name: null,
+                email: null,
+                bdate: null,
+                tel: null
             }
         }
     },
     components:{
         Title,
-        Datepicker
+        Datepicker,
+        VuePhoneNumberInput
+    },
+    methods:{
+        formSubmit(e){
+            //валидируем
+            if(this.phys.name && this.phys.email && this.phys.bdate && this.phys.tel){
+                console.log('ok');
+                return true;
+                //отправляем контент на сервер
+            }
+            console.log('stopped');
+            e.preventDefault();
+        }
     }
 }
 </script>
