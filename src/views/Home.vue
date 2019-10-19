@@ -1,9 +1,9 @@
 <template>
   <div class="home-root">
     <div :style="{'background':'url('+require('@/assets/images/main.png')+')','background-size':'cover'}" id="mainDiv" class="d-inline-flex align-items-center flex-column justify-content-center">
-      <div id="title">{{title}}</div>
-      <div id="text" class="container align-center" >{{text}}</div>
-      <div class="align-items-center"><b-button id="make-request-btn" to="/">Подать заявку</b-button></div>  
+      <div id="title" class="m-4">{{title}}</div>
+      <div id="text" class="container align-center m-4" >{{text}}</div>
+      <div class="align-items-center m-4"><b-button id="make-request-btn" to="/">Подать заявку</b-button></div>  
     </div>
     <Header />
     <div id="rules">
